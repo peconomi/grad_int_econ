@@ -1,0 +1,542 @@
+\documentclass[10pt]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+% \usepackage{fontspec}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{setspace, titling}
+%\newcommand{\subtitle}[1]{%
+%	\posttitle{%
+%		\par\end{center}
+%	\begin{center}\large#1\end{center}
+%	\vskip0.5em}%
+%}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{uo_green}{HTML}{154731}
+\definecolor{forest_green}{HTML}{006241}
+\definecolor{pine_green}{HTML}{007935}
+\definecolor{grass_green}{HTML}{62A70F}
+\definecolor{golden_yellow}{HTML}{FFD200}
+\definecolor{cool_gray}{HTML}{54565B}
+\definecolor{light_cool_gray}{HTML}{A8A8AA}
+%% FONTS
+\usepackage{fontspec}
+% See: https://tex.stackexchange.com/a/50593
+\setmainfont[
+BoldFont=FiraSans-Semibold.otf,
+ItalicFont = FiraSans-Italic.otf,
+BoldItalicFont = FiraSans-SemiBoldItalic.otf
+]{FiraSans-Regular.otf} %
+\setmonofont[
+BoldFont = FiraCode-Bold.ttf
+]{FiraCode-Regular.ttf}
+\usepackage{marvosym} % For cool symbols.
+\usepackage{fontawesome} % Ditto
+\usepackage{graphicx}
+\usepackage{twemojis}
+%\usepackage{emoji}
+
+\usepackage[normalem]{ulem} %% For strikeout font: \sout()
+
+
+
+\usepackage[colorlinks = true,
+linkcolor = pine_green,
+urlcolor  = pine_green,
+citecolor = pine_green,
+anchorcolor = black]{hyperref}
+\usepackage{graphicx}
+
+% For table formatting:
+\usepackage{array, booktabs, caption, siunitx}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+% Adjust margins for the first page
+\newgeometry{top=0.05in, bottom=1.15in, left=1.15in, right=1.15in}
+% Readings indent
+\usepackage{hanging} % provides hangparas
+\usepackage{changepage} 
+\usepackage{enumitem}
+\usepackage{array,tabularx,makecell,multirow}
+
+% One entry = its own paragraph with a hanging indent
+\newcommand{\reading}{\par\hangindent=2em\hangafter=1\noindent}
+
+% Indented block that will contain all readings under a header
+\newenvironment{readingsblock}{%
+  \begin{adjustwidth}{2em}{0pt} % indent whole block by 2em
+}{%
+  \end{adjustwidth}
+}
+
+\begin{document}
+
+
+
+\title{
+\raggedleft{
+\includegraphics[width=0.1\textwidth]{../img/TTUeconomics.png}}\\
+\vspace{0.6in}
+	\texttt{\textbf{International Economics} [ECO 5XXX]}\\[1em]
+}
+\author{\textbf{Spring 2026 Syllabus} \\ Department of Economics \\ Texas Tech University}
+%\date{}  % Toggle commenting to test
+\date{\vspace{-1ex}}
+
+\maketitle
+
+%\section*{Course at a glance}
+% 1F1EE 1F1EA
+% flag-ireland
+% \emoji{flag-ireland}
+
+\begin{table}[!h]
+	\ra{1.1}
+	\begin{tabular}{l @{\hspace{1.25\tabcolsep}} l l l @{\hspace{1.25\tabcolsep}} l l l @{\hspace{1.25\tabcolsep}} l @{}}
+		& \textbf{{Lecture}} & & &  & & & \textbf{{Materials}} \\
+		\faGlobe & In-Person Classes & & & & & \faBook & No textbook, notes-based \\
+		\faClockO & Classes: tba  & & & & & & \\
+		\faInstitution & Holden Hall tba & & & & & & 
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\ra{1.1}
+	\begin{tabular}{l @{\hspace{1.25\tabcolsep}} l @{}}
+		& \textbf{{Instructor}}\\
+		\faUser & Philip Economides \twemoji{flag: Ireland} \\
+		\faGlobe & \href{https://philip-economides.com/}{philip-economides.com} \\
+		\faPaperPlaneO & \href{mailto:peconomi@ttu.edu}{peconomi@ttu.edu} \\
+		\faMapMarker & Holden Hall 236 \\
+		\faClockO & Office Hours: Tues/Thurs 12:30--13:30pm, or by appointment	
+	\end{tabular}
+\end{table}
+
+\section*{General Information}
+
+\paragraph{Canvas:} Frequent use of Canvas is essential to pass this course. 
+I will feature a detailed module list to ensure all learning assets associated with the class are easily retrieved.   
+Each weekly module contains the lecture slides alongside associated readings.
+As the course proceeds, assignments will be posted to complete and submit on Canvas. 
+
+\paragraph{Email:} Announcements will be sent frequently to students and posted on Canvas; they provide information/updates on scheduling of classes, presentations and assignment feedback. 
+It is essential that you receive and read the class emails carefully.  
+Important: if you do not receive the emails, contact me ASAP. 
+Email me with any course structure questions you might have.  
+I am typically available throughout the working week, but will make efforts to get back to students during the weekend, if I am available and the matter is urgent. 
+When emailing me, please include ``ECO 5XXX” in the subject line. 
+This helps ensure that I will not overlook your email by accident. 
+
+
+\newpage
+
+\newgeometry{top=1.15in, bottom=1.15in, left=1.15in, right=1.15in}
+
+
+\section*{Course summary}
+
+\paragraph{Description:} This course provides an advanced introduction to the economics of globalization, focusing on how trade and financial integration shape national and international outcomes. 
+The course is organized into three interrelated modules. 
+The first develops the core theoretical foundations of international trade, covering classical and modern models that explain the structure of global production and the distributional effects of trade. 
+The second module turns to trade policy and multinational activity, analyzing how tariffs, trade agreements, and firm-level decisions over foreign direct investment interact to shape welfare and market outcomes. 
+The final module examines topics in international finance, including exchange rate dynamics, global capital flows, and the transmission of U.S. monetary policy to emerging markets and developing economies. 
+Emphasis is placed on understanding how macro-financial shocks influence liquidity, reserve management, and crisis response in a globally integrated economy. 
+
+Throughout, students will engage directly with influential academic papers that have shaped modern research in international economics, and will develop skills in critical evaluation, presentation, and research design through written assignments, referee reports, and a term paper.
+
+\paragraph{Prerequisites:} Enrollment in this course requires successful completion of the first-year Ph.D. microeconomics and macroeconomics comprehensive examinations.
+
+
+\section*{Course Structure}
+
+\subsection*{Grades}
+
+Grades awarded based on your relative performance in class, as determined by the following weights:
+\begin{table}[!h]
+    \ra{1.2}
+    \centering
+    \begin{tabular}{@{\extracolsep{1cm}}lll@{}}
+        \textbf{Assignment} & \textbf{Weight} & \textbf{Deadline} \\
+        \midrule
+        Class participation \& paper critiques $\times 2$ & 15\% &  Throughout the term \\
+        Written Assignments $\times 2$ & 20\% &  February 27 \& April 21 \\
+        Term Paper Proposal & 10\% & March 3 \\
+        Term Paper & 35\% & April 30 \\
+        Class Presentations $\times 2$ & 20\% &  During the term \& May 4  \\
+    \end{tabular}
+\end{table}
+
+  
+  \begin{table}[h!]
+\centering
+\caption{Letter Grade Scale}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Letter Grade} & \textbf{Percentage Range (\%)} & \textbf{Grade Point Value} \\
+\midrule
+A  & 90--100  & 4.0 \\
+B  & 80--89   & 3.0 \\
+C  & 70--79   & 2.0 \\
+D  & 60--69   & 1.0 \\
+F  & Below 60 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+  
+
+Attendance is REQUIRED and will be MONITORED throughout the semester.  Incidences of excessive absence will be dealt with in a manner consistent with University policy and procedures. 
+
+\subsection*{Class Participation and Paper Critiques}
+
+In each class we will be discussing at length research articles, so class participation will depend primarily on you doing the assigned readings before class. 
+For two of the required readings (to be discussed in class) you are asked to provide a one-page critical analysis of the papers’ research ideas. 
+You can choose any two papers from the list of required readings, and the critique must be turned in by 5pm the evening before the class assigned to that reading.
+
+\subsection*{Written Assignments: Referee Reports} 
+
+There will be two written assignments during the length of the course. They will consist of referee reports. 
+A referee report is a critical assessment of an unpublished paper that is submitted for publication at a peer-reviewed journal. 
+It is an activity solicited by a journal editor and is intended to help the editor decide whether or not to pursue the paper for publication.
+A typical referee report is 2-4 pages (single spaced) and has the following general structure. 
+The first few paragraphs should summarize the paper for the editor (putting it into context), describe the main model/estimation features of the paper and highlight its strengths and original contributions. 
+The body of the report should be a critical analysis of the paper. 
+Comments may be organized in paragraphs or in list form, and should discuss the paper’s weaknesses. 
+Where possible, you should propose directions on how the author(s) could address the identified weaknesses, as well as make recommendations for changes that would improve the paper. 
+Comments are generally organized based on their importance for the overall quality of the paper, from major concerns to minor points.
+You will be provided the working papers to referee. 
+If you have a strong preference for a particular unpublished paper, please consult with me in advance.
+
+\subsection*{Paper Presentations}
+Each student will complete two presentations during the class. The first presentation will be 15 minutes long and will cover a published paper that is already assigned in the syllabus. 
+The presentation will take place at the beginning of class time. 
+The second presentation will be a 30-minute presentation of your term paper. Suggestions on the structure and focus of each presentation will be provided in class.
+
+\subsection*{Term paper and Paper proposal}
+A requirement for this course is to write a term paper on a trade-related topic of your choice, decided in
+consultation with me. There are three options for the paper:
+\begin{enumerate}
+  \item a comprehensive analysis of the existing literature that identifies unresolved research questions (must have at least 15 references published in academic journals);
+  \item an original paper that presents a novel research idea and derives some preliminary theoretical and/or empirical results; or
+  \item an empirical analysis replicating and extending the results of an influential trade paper
+\end{enumerate}
+  
+In either case, the term paper must show your thinking and analysis of the topic/idea and provide a concrete avenue and suggestions for future research. 
+More details on each research option will be given in class. The term paper is due the last day of class {\bf (April 30 2026 by midnight)}.\\
+
+A written one-page proposal (1-inch margins, single spaced, 12-font) motivating the topic of interest and framing the research question to be addressed in the term paper must be submitted by the end of week 7
+of classes {\bf (March 3 2026 by 5pm)}. Please schedule a meeting with me before or immediately after the submission of the proposal to discuss it.
+
+
+
+
+
+\begin{table}[h!]
+    \caption*{\large\textbf{Tentative Schedule: Lectures and Topics}}
+    \centering
+    \ra{1.5}
+    \begin{tabular}{@{\extracolsep{0.5cm}} c c l @{}}
+        \toprule
+        \textbf{Week} & \textbf{Date} & \textbf{Topic} \\ 
+        \toprule
+        \multicolumn{2}{c}{\textbf{Theory of Trade}} & \\
+        01 & - & Intro. to International Trade \& Deductive Reasoning \\
+        02 & - & Modelling Trade (Heckscher-Ohlin, Armington) \\
+        03 & - & Monopolistic Competition Model (Krugman) \\
+        04 & - & Trade with Heterogeneous Firms (Melitz) \\
+        05 & - & Comparative Adv. with Many Countries (Eaton-Kortum) \\
+        06 & - & Gains from Trade (Arkolakis, Costinot, Rodriguez-Clare) \\ 
+        \midrule
+        \multicolumn{2}{c}{\textbf{Trade Policy and Multinationals}} & \\
+        07 & - & Distributional Consequences of Trade \\
+        08 & - & Multinational Firms: Vertical \& Horizontal FDI \\
+        09 & - & Optimal Tariffs \& Retaliation \\
+        10 & - & Trade Agreements \& Political Economy \\ 
+        \midrule
+        \multicolumn{2}{c}{\textbf{Global Finance}} & \\
+        11 & - & Parity Relationships and Exchange Rates (Dornbusch) \\
+        12 & - & Exchange Rate Determination \& Monetary Policy \\
+        13 & - & Global Liquidity Flows \\
+        14 & - & Managing Financial Crises (Obstfeld \& Rogoff) \\
+        15 & - & (Reserved for Presentations) \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[h!]
+\centering
+\renewcommand\arraystretch{1.25}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{|>{\centering\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{11.5cm}|}
+\hline
+\textbf{Date} & \textbf{Assigned Reading} \\
+\hline
+1/15  & Course logistics + Intro to International Trade \\
+\hline
+1/22  & Feyrer, James, 2019. ``Trade and Income — Exploiting Time Series in Geography'', \textit{AEJ Applied}, forthcoming. \\
+\hline
+1/22 & Dornbusch, R., S. Fischer, and P.A. Samuelson, 1977. ``Comparative Advantage, Trade and Payments in a Ricardian Model with a Continuum of Goods'', \textit{American Economic Review} 67, 823–839. \\
+\hline
+1/29 & Krugman, P., 1980. ``Scale Economies, Product Differentiation and the Pattern of Trade'', \textit{American Economic Review} 70, 950–959. \\
+\hline
+\multirow{2}{*}{2/5}
+     & \textit{Student presentation}: Bernard, A., and B. Jensen, 1999. ``Exceptional Exporter Performance: Cause, Effect or Both?'', \textit{Journal of International Economics} 47, 1–25. \\
+\cline{2-2}
+     & Melitz, M., 2003. ``The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity'', \textit{Econometrica} 71, 1695–1725. \\
+\hline
+2/12 & Pavcnik, N., 2002. ``Trade Liberalization, Exit and Productivity Improvements: Evidence from Chilean Plants'', \textit{Review of Economic Studies} 69, 245–276. \\
+\hline
+\multirow{2}{*}{\makecell[c]{2/12\\\&\\2/16}}
+     & Bustos, P., 2011. ``Trade Liberalization, Exports and Technology Upgrading: Evidence on the Impact of MERCOSUR on the Argentinean Firms'', \textit{American Economic Review} 101, 304–340. \\
+\cline{2-2}
+     & \textit{Student presentation}: Fort, T., J. Pierce, and P. Schott, 2018. ``New Perspectives on the Decline of U.S. Manufacturing Employment'', \textit{Journal of Economic Perspectives} 32, 47–72. \\
+\hline
+2/19  & Autor, D., D. Dorn, and G. Hanson, 2013. ``The China Syndrome: Local Labor Market Effects of Import Competition in the United States'', \textit{American Economic Review} 103(6), 2121–2168. \\
+\hline
+2/26 & Helpman, E., M. Melitz, and S. Yeaple, 2004. ``Exports versus FDI with Heterogeneous Firms'', \textit{American Economic Review} 94, 300–316. \\
+\hline
+\multirow{2}{*}{2/26}
+     & \textit{Student presentation}: Costinot, A., L. Oldenski, and J. Rauch, 2011. ``Adaptation and the Boundaries of the Multinational Firm'', \textit{Review of Economics and Statistics} 93, 298–308. \\
+\cline{2-2}
+     & Antr\`as, P., 2003. ``Firms, Contracts and Trade Structure'', \textit{Quarterly Journal of Economics} 118, 1375–1418. \\
+\hline
+3/5  & Keller, W., and S. Yeaple, 2013. ``The Gravity of Knowledge'', \textit{American Economic Review} 103(4), 1414–1444. \\
+\hline
+\multirow{2}{*}{3/12}
+     & \textit{Student presentation}: Aitken, B., and A. Harrison, 1999. ``Do Domestic Firms Benefit from Foreign Direct Investment? Evidence from Venezuela'', \textit{American Economic Review} 89, 605–618. \\
+\cline{2-2}
+     & Javorcik, B. S., 2004. ``Does Foreign Direct Investment Increase the Productivity of Domestic Firms? In Search of Spillovers through Backward Linkages'', \textit{American Economic Review} 94, 605–627. \\
+\hline
+3/19 & Student Presentations \\
+\hline
+3/26 & Student Presentations \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+\newpage
+
+\newgeometry{tmargin=.85in,bmargin=.9in,lmargin=.85in,rmargin=.85in}
+
+\subsection*{Detailed Reading List}
+
+\noindent \textbf{I. Neoclassical Models of Trade: The Ricardian Model of Trade}\\[6pt]
+
+\begin{readingsblock}
+
+  \reading (*)Feyrer, James, 2019. “Trade and Income – Exploiting Time Series in Geography”, \textit{AEJ Applied}, forthcoming.
+  
+  \reading Feenstra, Robert C. \textit{Advanced International Trade: Theory and Evidence}, Chapter 1, pp. 1–4.
+
+  \reading (*) Dornbusch, R., S. Fischer, and P.A. Samuelson, 1977. “Comparative Advantage, Trade and Payments in a Ricardian Model with a Continuum of Goods,” \textit{American Economic Review} 67, 823–839.
+
+  \reading Eaton, J., and S. Kortum, 2002. “Technology, Geography, and Trade,” \textit{Econometrica} 70(5), 1741–1779.
+
+  \reading Matsuyama, K., 2008. “Ricardian Trade Theory,” in \textit{The New Palgrave Dictionary of Economics}.\\[4pt]
+
+  \reading \textbf{Empirical Evidence for the Ricardian Model} \\
+
+\reading Costinot, A., D. Donaldson, and I. Komunjer, 2011. ``What Goods Do Countries Trade? A Quantitative Exploration of Ricardo's Ideas,'' \textit{Review of Economic Studies}, 79, 581–608.
+
+\reading Costinot, A., and D. Donaldson, 2012. ``Ricardo’s Theory of Comparative Advantage: Old Idea, New Evidence,'' \textit{American Economic Review: Papers \& Proceedings}, 102, 453–458.
+
+\reading Chor, D., 2010. ``Unpacking Sources of Comparative Advantage: A Quantitative Approach,'' \textit{Journal of International Economics}, 82(2), 152–167.\\[4pt]
+\end{readingsblock}
+
+
+\noindent \textbf{II. Monopolistic Competition Model and Applications} \\[6pt]
+
+
+
+\begin{readingsblock}
+
+\noindent \textbf{Basic Monopolistic Competition Model of Trade} \\[4pt]
+
+\reading (*) Krugman, P., 1980. ``Scale Economies, Product Differentiation and the Pattern of Trade'', {\it American Economic Review} 70, 950-959.
+
+\reading Krugman, P., 1979. ``Increasing Returns, Monopolistic Competition and International Trade'', {\it Journal of International Economics} 9, 469-479.
+
+\reading Krugman, P. (1995). ``Increasing Returns, Imperfect Competition and the Positive Theory of International Trade'', {\it Handbook of International Economics} Vol. 3, Chapter 24.
+
+\reading Feenstra, R. (2004). {\it Advanced International Trade. Theory and Evidence.} Chapter 5.
+
+\reading Helpman, H., and P. Krugman, (1985). {\it Market Structure and Foreign Trade}, MIT Press, Ch. 6-9.\\[4pt]
+
+\reading \textbf{Evidence for Monopolistic Competition Model} \\[4pt]
+
+\reading Hummels, D. and J. Levinsohn, 1995. “Monopolistic Competition and International Trade: Reinterpreting the Evidence”, {\it Quarterly Journal of Economics} 110, 799-836.
+
+\reading Helpman, Elhanan, 1987. “Imperfect Competition and International Trade: Evidence from Fourteen Industrial Countries”, {\it Journal of Japanese and International Economies} 1, 62-81.
+
+\reading Hanson, G. and C. Xiang, 2004. “The Home Market Effect and Bilateral Trade Patterns”, {\it American Economic Review} 94, 1108-1129.\\[4pt]
+\end{readingsblock}
+
+
+
+
+
+\noindent \textbf{III. Firm Heterogeneity Models} \\[6pt]
+
+  \begin{readingsblock}
+
+  \reading \textbf{Basic Facts} \\[4pt]
+  
+  \reading Bernard, A. and B. Jensen, 1999. “Exceptional Exporter Performance: Cause, Effect or Both?”, {\it Journal of International Economics} 47: 1-25.
+  
+  \reading Bernard, A. and B. Jensen, 2004. “Why Some Firms Export?”, {\it Review of Economics and Statistics} 86, 561-569.
+  
+  \reading De Loecker, J., 2007. “Do Exports Generate Higher Productivity? Evidence from Slovenia”, {\it Journal of International Economics} (73), 69-98.
+  
+  \reading Bernard, A., Jensen, B., Redding, S. and P. Schott, 2007. “Firms in International Trade”, {\it Journal of Economic Perspectives} 21, 105-130. \\[4pt]
+  
+  \reading \textbf{Theoretical Models of Firm Heterogeneity} \\[4pt]
+  
+  \reading (*) Melitz, M., 2003. “The Impact of Trade on Intra-Industry Realocations and Aggregate Industry Productivity”, {\it Econometrica} 71, 1695-1725.
+  
+  \reading Chaney, T., 2005. “Distorted Gravity: Heterogeneous Firms, Market Structure and the Geography of International Trade”, {\it American Economic Review} 98, 1707-1721.
+  
+  \reading Yeaple, Stephen, 2005. "A simple model of firm heterogeneity, international trade, and wages." {\it Journal of international Economics} 65, 1-20.
+  
+  \reading Bernard, A., Redding S., and P. Schott, 2004. “Comparative Advantage and Heterogeneous Firms”, {\it Review of Economic Studies} 74, 31-66.
+  
+  \reading Melitz, M. and G. Ottaviano, 2008. “Market Size, Trade and Productivity”, {\it Review of Economic Studies} 295-316.
+  
+  \reading Eaton, J. and S. Kortum, 2002. “Technology, Geography and Trade”, {\it Econometrica} 70, 1741-1780.
+  
+  \reading Bernard, A., Eaton, J., Jensen, B., Kortum, S., 2003. “Plants and Productivity in International Trade”, {\it American Economic Review} 93, 1268-1290. \\[4pt]
+  
+  
+  \reading \textbf{Empirics on Firms Heterogeneity: New Margins of Trade} \\[4pt]
+  
+  \reading Helpman, E., Melitz, M. and Y. Rubinstein, 2008. “Estimating Trade Flows: Trading Partners and Trading Volumes”, {\it Quarterly Journal of Economics} 123, 441-487.
+  
+  \reading Roberts, M. and J. Tybout, 1997. “The Decision to Export in Columbia: An Empirical Model with Sunk Costs”, {\it American Economic Review} 87, 545-564.
+  
+  \reading Eaton, J., Kortum, S. and F. Kramarz, 2004. “Dissecting Trade: Firms, Industries and Export Destinations”, {\it American Economic Review P\&P}  94(2), 150-154.
+  
+  \reading Arkolakis, C., 2010. “Market Penetration Costs and the New Consumers Margin in International Trade”, {\it Journal of Political Economy} 118, 1151-1199. \\[4pt]
+  
+  \end{readingsblock}
+  
+  
+\noindent \textbf{IV. Topics: Distributional consequences of trade} \\[6pt]
+
+  \begin{readingsblock}
+  
+  \reading \textbf{Industry Reallocations} \\[4pt]
+  
+  \reading (*) Pavnckic, N., 2002. “Trade Liberalization, Exit and Productivity Improvements: Evidence from Chilean Plants”, {\it Review of Economic Studies} 69, 245-276.
+  \reading (*) Bustos, P., 2011. “Trade Liberalization, Exports and Technology Upgrading: Evidence on the Impact of MERCOSUR on the Argentinean Firms”, {\it American Economic Review} 101, 304-340.
+  \reading (*) Dix-Carneiro, Rafael, and Brian K. Kovak. 2017. "Trade Liberalization and Regional Dynamics." {\it American Economic Review}, 107 (10): 2908-46.
+  \reading Amiti, M. and J. Konings, 2007. “Trade Liberalization, Intermediate Inputs and Productivity: Evidence from Indonesia”, {\it American Economic Review} 97(5), 1611-1638.
+  \reading Trefler, D., 2004. “The Long and Short of the Canada-U.S. Free Trade Agreement”, {\it American Economic Review} 94, 870-895. \\[4pt]
+  
+  
+  \reading \textbf{Labor Market Effects} \\[4pt]
+  
+  \reading (*)Autor, D., D. Dorn and G. Hanson, 2013. “The China Syndrome: Local Labor Market Effects of Import Competition in the United States”, {\it American Economic Review} 103(6): 2121-2168.
+  \reading (*) Hummels, D., Jørgensen, R., Munch, J., and Xiang, C. 2014. “The Wage Effects of Offshoring: Evidence from Danish Matched Worker-Firm Data”, {\it American Economic Review} 104(6), 1597-1629.
+  \reading (*)Verhoogen, E., 2008. “Trade, Quality Upgrading and Wage Inequality in the Mexican Manufacturing Sector”, {\it Quarterly Journal of Economics} 123, 489-530. 
+  \reading Harrigan, J., A. Reshef and F. Toubal, 2016. “The March of the Techies: Technology, Trade and Job Polarization in France, 1994-2007”, {\it NBER working paper} 22110.
+  \reading Goos, M., A. Manning, and A. Salomons. "Explaining Job Polarization: Routine-Biased Technological Change and Offshoring." {\it American Economic Review} 104.8 (2014): 2509-26. \\[4pt]
+  \end{readingsblock}
+  
+  
+\noindent \textbf{V. Topics: Multinational Firms} \\[6pt]
+
+  \begin{readingsblock}
+  
+  \reading \textbf{Firms and Decision to Invest Abroad} \\[4pt]
+  
+  \reading (*) Helpman, E., Melitz, M. and S. Yeaple, 2004. “Exports versus FDI with Heterogeneous Firms”, {\it American Economic Review} 94, 300-316.
+  \reading Brainard, L., 1997. “An Empirical Assesment of the Proximity-Concentration Trade-off Between Multinational Sales and Trade”, {\it American Economic Review} 87, 520-544.
+  \reading Conconi, P., A. Sapir, and M. Zanardi, 2016. “The Internationalization Process of Firms: from Exports to FDI”, {\it Journal of International Economics} 99, 16-30.
+  \reading Yeaple, S., 2003. “The Role of Skill Endowments in the Structure of U.S. Outward Foreign Direct Investment”, {\it Review of Economics and Statistics} 85, 726-734.
+  \reading Hanson, G., Mataloni, R., and Slaughter, M., 2005. “Vertical Production Networks in Multinational Firms”, {\it Review of Economics and Statistics} 87, 664-678.
+  \reading Blonigen, B. and J. Piger, 2011. “Determinants of Foreign Direct Investment”, University of Oregon, mimeo.
+  \reading Helpman, E., 1984. “A Simple Theory of International Trade with Multinational Corporations”, {\it Journal of Political Economy} 92, 451-471.
+  \reading Markusen, J., and A. Venables, 2000. “The theory of endowment, intra-industry and multinational trade”, {\it Journal of International Economics} 52, 209-234. \\[4pt]
+  
+  
+  \reading \textbf{Boundaries of the Firm} \\[4pt]
+  
+  \reading (*) Antras, P., 2003. “Firms, Contracts and Trade Structure”, {\it Quarterly Journal of Economics} 118, 1375-1418.
+  \reading Antras, P., E., Helpman, 2004. “Global Sourcing”, {\it Journal of Political Economy} 112, 552-580.
+  \reading Grossman, G. and E. Helpman, 2002. “Integration vs. Outsourcing in Industry Equilibrium”, {\it Quarterly Journal of Economics} 117, 85-120.
+  \reading Yeaple, S., 2006. “Foreign Direct Investment and the Structure of U.S. Trade”, {\it Journal of the European Economic Association} 4, 602-611.
+  \reading Costinot, A., Oldensky, L, and J. Rauch, 2009. “Adaptation and the Boundaries of the Multinational Firms”, {\it Review of Economics and Statistics} 93, 298-308.
+  \reading Nunn, N. and D. Trefler, 2008. “The Boundaries of the Multinational Firm: An Empirical Analysis”, in E. Helpman, D. marin and T. Verdier (Eds.), {\it The Organization of Firms in a Global Economy}, Harvard University Press. \\[4pt]
+  
+  \reading \textbf{Offshoring} \\[4pt]
+  
+  \reading (*) Keller, Wolfgang and Stephen Yeaple, 2013. “The Gravity of Knowledge”, {\it American Economic Review} 103(4), 1414-1444.
+  \reading Grossman, G. and E. Rossi-Hansberg, 2008. “Trading Tasks: A Simple Theory of Offshoring”, {\it American Economic Review} 98, 1978-1997.
+  \reading Feenstra, R. and G. Hanson, 1999. “The Impact of Outsourcing and High-Technology Capital on Wages”, {\it Quarterly Journal of Economics} 114, 907-940.
+  \reading Yi, K. M., 2003. “Can Vertical Specialization Explain the Growth of World Trade?”, {\it Journal of Political Economy}, 111:1, 52-102. \\[4pt]
+  
+  
+  \reading \textbf{FDI Spillovers} \\[4pt]
+  
+  \reading (*) Javorcik, B. S., 2004. “Does Foreign Direct Investment Increase the Productivity of Domestic Firms? In Search of Spillovers through Backward Linkages”, {\it American Economic Review}, 605-627.
+  \reading Aitken, B. J., and A. Harrison, 1999. “Do Domestic Firms Benefit from Direct Foreign Investment? Evidence from Venezuela” {\it American Economic Review}, 605-618. \\[4pt]
+  
+  \end{readingsblock}
+  
+  
+\noindent \textbf{VI. Further Trade Readings} \\[6pt]
+
+  \begin{readingsblock}
+  
+  \reading \textbf{Institutional and Market Frictions in International Trade} \\[4pt]
+  
+  \reading Manova, K., 2011. “Credit Constraints, Heterogeneous Firms and International Trade”, Stanford University, mimeo.
+  \reading Nunn, N., 2007. “Relationship-Specificity, Incomplete Contracts and the Pattern of Trade”, {\it Quarterly Journal of Economics} 122, 569-600. \\[4pt]
+  
+  \reading \textbf{Environment and Trade} \\[4pt]
+  
+  \reading Forslid, R., T. Okubo and K. H. Ulltveit-Moe, 2015. “Why are Firms that Export Cleaner? International Trade, Abatement and Environmental Emissions”, University of Oslo, mimeo.
+  \reading Barrows, J. and H. Ollivier, 2016. “Emission Intensity and Firm Dynamics: Reallocation, Product Mix and Technology in India”, w.p. 245, Grantham Research Institute on Climate Change and the Environment.
+  \reading Bombardini, M. and B. Li, 2016. “Trade, Pollution and Mortality in China”, University of British Columbia, mimeo. \\[4pt]
+  
+  \reading \textbf{Health/Labor/Gender and Trade} \\[4pt]
+  
+  \reading Juhn, C., G. Ujhelyi, and C. Villegas-Sanchez, 2014. "Men, women, and machines: How trade impacts gender inequality", {\it Journal of Development Economics} 106, 179-193.
+  \reading McManus, T. C. and G. Schaur, 2016. “The Effect of Import Competition on Worker Health”, {\it Journal of International Economics} 102, 160-172.
+  \reading Boler, E. A., B. Javorcik, K. H. Ulltveit-Moe, 2018. “Working across Time Zones: Exporters and the Gender Wage Gap”, {\it Journal of International Economics} 111, 122-133. \\[4pt]
+
+  \reading \textbf{Economic Geography and Trade} \\[4pt]
+  
+  \reading Redding, S., and A. J. Venables, 2004. "Economic Geography and International Inequality" {\it Journal of International Economics}. 62, 53-82.
+  \reading Cosar, A. K., and Pablo D. Fajgelbaum. 2016. "Internal Geography, International Trade, and Regional Specialization." {\it American Economic Journal: Microeconomics} 8, 24-56. \\[4pt]
+  
+  \end{readingsblock}
+  
+  
+  \newpage
+  
+
+  
+  \section*{Course Policies}
+
+For policies related to academic integrity, disability, religious holy days, and accommodation for pregnant students, please visit:
+
+https://www.depts.ttu.edu/tlpdc/RequiredSyllabusStatements.php
+
+ 
+
+For additional policies related to discrimination, harassment, sexual violence, recovery services, and others, please visit:
+
+https://www.depts.ttu.edu/tlpdc/RecommendedSyllabusStatements.php
+
+ 
+
+For this course’s policy on the use of generative AI, please visit:
+
+https://www.depts.ttu.edu/tlpdc/Resources/Syllabus/ai-use-not-permitted.pdf
+
+
+\end{document}
